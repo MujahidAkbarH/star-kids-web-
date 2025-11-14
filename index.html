@@ -22,39 +22,84 @@
 
     <title>SKGSS</title>
 
-    <nav>
-        <div class="top">
-            <div class="topleft">
-                <ul>
-                    <li><a href=""><img src="./assets/white phone.svg" alt="" class="font-bold">+92 3313679089</a></li>
-                    <li><a href="./helpdesk.html"><img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="font-bold">ONLINE
-                            SERVICE
-                            DESK </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="topright">
-                <ul>
-                    <li><a href="">SCHOOL MANAGEMENT PORTAL</a></li>
-                </ul>
-            </div>
-        </div>
+    <!-- Top Bar + Main Navbar with Centered Logo -->
+<nav class="bg-white shadow-md">
+  <!-- Top Bar -->
+  <div class="bg-[#ffffff] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 relative">
 
+      <!-- Centered Logo -->
+      <div class="absolute left-1/2 transform -translate-x-1/2">
+        <img src="./assets/main.png" alt="School Logo" class="h-10 w-auto">
+      </div>
 
-    </nav>
-    <div class="navbar">
-        <div class="logo">
-            <img src="./assets/main.png" alt="">
-        </div>
-        <div class="navigator">
-            <ul>
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT US</a></li>
-                <li><a href="./admission.html">ADMISSION</a></li>
-                <li><a href="./contact.html">CONTACT US</a></li>
-            </ul>
-        </div>
+      <!-- Desktop Top Bar Links -->
+      <div class="hidden sm:flex space-x-6 items-center">
+        <a href="" class="flex items-center gap-1">
+          <img src="./assets/white phone.svg" alt="" class="h-4 w-4"> +92 3313679089
+        </a>
+        <a href="./helpdesk.html" class="flex items-center gap-1">
+          <img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="h-4 w-4"> ONLINE SERVICE DESK
+        </a>
+      </div>
+
+      <div class="hidden sm:block">
+        <a href="">SCHOOL MANAGEMENT PORTAL</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="sm:hidden flex items-center ml-auto">
+        <button id="hamburger" class="p-2 rounded-md text-blue-600   focus:outline-none">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-white">
+    <!-- Top Bar Links -->
+    <div class="bg-[#003366] px-4 py-2">
+      <a href="" class="block text-white py-1">+92 3313679089</a>
+      <a href="./helpdesk.html" class="block text-white py-1">ONLINE SERVICE DESK</a>
+      <a href="" class="block text-white py-1">SCHOOL MANAGEMENT PORTAL</a>
+    </div>
+    <!-- Main Navbar Links -->
+    <div class="px-4 py-2 space-y-1">
+      <a href="./index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+      <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+      <a href="./admission.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+      <a href="./contact.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+    </div>
+  </div>
+
+  <!-- Desktop Main Navbar -->
+  <div class="hidden sm:block bg-white">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center h-16 space-x-4">
+        <a href="./index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+        <a href="./about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+        <a href="./admission.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+        <a href="./contact.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+    
 </head>
 
 <body>
@@ -114,20 +159,23 @@
     <section class="aboutsection">
         <!-- Left Text Section -->
         <div class="aboutleft">
-            <h2 class="aboutheading">ABOUT<br>STAR KIDS GRAMMAR SCHOOL</h2>
-            <p class="abouttext">
-                Established in 2000 as a small Montessori setup for young learners, Star Kids Grammar Secondary School
-                has grown into a well-recognized and trusted educational network in Korangi, Karachi. Over the years,
-                Star Kids has become a symbol of quality and affordable education, offering classes from Montessori to
-                Matriculation with a commitment to academic excellence and character building.
-                With more than 25 years of educational excellence, Star Kids now operates two campuses and serves a
-                student body of over 700 learners, making it one of the leading and most affordable schools in the area.
-                A proud initiative of the Star Kids Schooling System, its sub-project, The Floret Academy, continues to
-                expand creative and early learning opportunities for children. Registered with the Karachi Board since
-                2010, Star Kids maintains an impressive record in board examinations and has successfully guided many
-                students toward reputable colleges and universities. Today, Star Kids stands as a strong, growing
-                institution—recognized for its dedication, results, and over two decades of excellence in education.
-            </p>
+<div class="relative max-w-4xl mx-auto my-8 px-4 text-justify before:content-[''] before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-blue-600 after:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-1 after:bg-blue-600">
+  <h2 class="text-3xl font-bold mb-4 text-center sm:text-left">ABOUT<br>STAR KIDS GRAMMAR SCHOOL</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Established in 2000 as a small Montessori setup for young learners, Star Kids Grammar Secondary School
+    has grown into a well-recognized and trusted educational network in Korangi, Karachi. Over the years,
+    Star Kids has become a symbol of quality and affordable education, offering classes from Montessori to
+    Matriculation with a commitment to academic excellence and character building.
+    With more than 25 years of educational excellence, Star Kids now operates two campuses and serves a
+    student body of over 700 learners, making it one of the leading and most affordable schools in the area.
+    A proud initiative of the Star Kids Schooling System, its sub-project, The Floret Academy, continues to
+    expand creative and early learning opportunities for children. Registered with the Karachi Board since
+    2010, Star Kids maintains an impressive record in board examinations and has successfully guided many
+    students toward reputable colleges and universities. Today, Star Kids stands as a strong, growing
+    institution—recognized for its dedication, results, and over two decades of excellence in education.
+  </p>
+</div>
+
 
             <div class="aboutbtn">
                 <button class="text-decoration-none outline-none focus:outline-none active:outline-none">Learn More <img

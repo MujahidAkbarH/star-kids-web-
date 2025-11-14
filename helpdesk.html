@@ -794,43 +794,91 @@
                 width: 24px;
             }
         }
+          /* Remove underline on all links */
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
     </style>
     <title>SERVICE DESK</title>
-    <nav>
-        <div class="top">
-            <div class="topleft">
-                <ul>
-                    <li><a href=""><img src="./assets/white phone.svg" alt="" class="font-bold">+92 3313679089</a>
-                    </li>
-                    <li><a href="./helpdesk.html"><img src="./assets/open-envelop-svgrepo-com.svg" alt=""
-                                class="font-bold">ONLINE
-                            SERVICE
-                            DESK </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="topright">
-                <ul>
-                    <li><a href="">SCHOOL MANAGEMENT PORTAL</a></li>
-                </ul>
-            </div>
-        </div>
+       <!-- Top Bar + Main Navbar with Centered Logo -->
+<nav class="bg-white shadow-md">
+  <!-- Top Bar -->
+  <div class="bg-[#ffffff] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 relative">
 
+      <!-- Centered Logo -->
+      <div class="absolute left-1/2 transform -translate-x-1/2">
+        <img src="./assets/main.png" alt="School Logo" class="h-10 w-auto">
+      </div>
 
-    </nav>
-    <div class="navbar">
-        <div class="logo">
-            <img src="./assets/main.png" alt="">
-        </div>
-        <div class="navigator">
-            <ul>
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT US</a></li>
-                <li><a href="./admission.html">ADMISSION</a></li>
-                <li><a href="./contact.html">CONTACT US</a></li>
-            </ul>
-        </div>
+      <!-- Desktop Top Bar Links -->
+      <div class="hidden sm:flex space-x-6 items-center">
+        <a href="" class="flex items-center gap-1">
+          <img src="./assets/white phone.svg" alt="" class="h-4 w-4"> +92 3313679089
+        </a>
+        <a href="./helpdesk.html" class="flex items-center gap-1">
+          <img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="h-4 w-4"> ONLINE SERVICE DESK
+        </a>
+      </div>
+
+      <div class="hidden sm:block">
+        <a href="">SCHOOL MANAGEMENT PORTAL</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="sm:hidden flex items-center ml-auto">
+        <button id="hamburger" class="p-2 rounded-md text-blue-600   focus:outline-none">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-white">
+    <!-- Top Bar Links -->
+    <div class="bg-[#003366] px-4 py-2">
+      <a href="" class="block text-white py-1">+92 3313679089</a>
+      <a href="./helpdesk.html" class="block text-white py-1">ONLINE SERVICE DESK</a>
+      <a href="" class="block text-white py-1">SCHOOL MANAGEMENT PORTAL</a>
+    </div>
+    <!-- Main Navbar Links -->
+    <div class="px-4 py-2 space-y-1">
+      <a href="./index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+      <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+      <a href="./admission.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+      <a href="./contact.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+    </div>
+  </div>
+
+  <!-- Desktop Main Navbar -->
+  <div class="hidden sm:block bg-white">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center h-16 space-x-4">
+        <a href="./index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+        <a href="./about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+        <a href="./admission.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+        <a href="./contact.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 </head>
 
 <body>
@@ -863,38 +911,44 @@
     </div>
     <!-- help desk form -->
 
-    <div class="container">
-        <h2 class="text-3xl font-bold">Service Desk Form</h2>
-        <div class="text">For queries and information, call at The Educators Service Desk helpline 0423-8050005 or fill
-            the form below.</div>
+<div class="service-form-wrapper relative max-w-4xl mx-auto my-12 px-6">
+  <!-- Left vertical blue line -->
+  <span class="absolute left-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
+  <!-- Right vertical blue line -->
+  <span class="absolute right-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
 
-        <form action="https://formspree.io/f/mgvnqarg" method="POST" >
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
+  <div class="container space-y-6">
+    <h2 class="text-3xl font-bold">Service Desk Form</h2>
+    <div class="text">For queries and information, call at The Educators Service Desk helpline 0423-8050005 or fill the form below.</div>
+    
+    <form action="https://formspree.io/f/mgvnqarg" method="POST" class="space-y-4">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="Name" placeholder="Enter your full name" required class="w-full border rounded px-3 py-2">
 
-            <label for="cell">Cell Number:</label>
-            <input type="tel" id="cell" name="Cell Number" placeholder="e.g., 03001234567" required>
+      <label for="cell">Cell Number:</label>
+      <input type="tel" id="cell" name="Cell Number" placeholder="e.g., 03001234567" required class="w-full border rounded px-3 py-2">
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="Email" placeholder="example@gmail.com" required>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="Email" placeholder="example@gmail.com" required class="w-full border rounded px-3 py-2">
 
-            <label for="who">Who Are You?</label>
-            <select id="who" name="Who Are You" required>
-                <option value="">Select an option</option>
-                <option value="Student">Student</option>
-                <option value="Parent">Parent</option>
-                <option value="Teacher">Teacher</option>
-                <option value="Visitor">Visitor</option>
-                <option value="Other">Other</option>
-            </select>
+      <label for="who">Who Are You?</label>
+      <select id="who" name="Who Are You" required class="w-full border rounded px-3 py-2">
+        <option value="">Select an option</option>
+        <option value="Student">Student</option>
+        <option value="Parent">Parent</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Visitor">Visitor</option>
+        <option value="Other">Other</option>
+      </select>
 
-            <label for="query">Your Query:</label>
-            <textarea id="query" name="Query" rows="4" placeholder="Write your question or issue here..."
-                required></textarea>
+      <label for="query">Your Query:</label>
+      <textarea id="query" name="Query" rows="4" placeholder="Write your question or issue here..." required class="w-full border rounded px-3 py-2"></textarea>
 
-            <input type="submit" value="Send Message">
-        </form>
-    </div>
+      <input type="submit" value="Send Message" class="bg-[#0066b3] text-white font-semibold px-6 py-2 rounded hover:bg-blue-700 cursor-pointer">
+    </form>
+  </div>
+</div>
+
 
 
 

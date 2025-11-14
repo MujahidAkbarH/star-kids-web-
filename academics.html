@@ -407,8 +407,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 40px auto 0;
-  width: 85%;
+  margin: 40px auto 0;         /* auto horizontal margins to center */
+  max-width: 900px;             /* limit width for large screens */
+  width: 85%;                   /* responsive width */
   font-family: "Open Sans", sans-serif;
   font-size: 17px;
   font-weight: 400;
@@ -427,6 +428,7 @@
   .text1,
   .text2 {
     width: 90%;
+    max-width: 700px;           /* smaller max width on tablets */
     font-size: 16px;
   }
 }
@@ -439,8 +441,10 @@
   .text1,
   .text2 {
     width: 92%;
-    margin-left: 0;
-    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;          /* ensure centering */
+    text-align: left;            /* optional: left align text */
   }
 }
 
@@ -452,10 +456,14 @@
   .text1,
   .text2 {
     width: 95%;
+    max-width: 350px;           /* very small screens */
     font-size: 15px;
     line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;          /* maintain centering */
   }
 }
+
 
 
         /* Calendar Section */
@@ -795,42 +803,92 @@
     width: 24px;
   }
 }
+  /* Remove underline on all links */
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
     </style>
     <title>ACADEMICS</title>
-    <nav>
-        <div class="top">
-            <div class="topleft">
-                <ul>
-                    <li><a href=""><img src="./assets/white phone.svg" alt="" class="font-bold">+92 3313679089</a>
-                    </li>
-                    <li><a href="./helpdesk.html"><img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="font-bold">ONLINE
-                            SERVICE
-                            DESK </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="topright">
-                <ul>
-                    <li><a href="">SCHOOL MANAGEMENT PORTAL</a></li>
-                </ul>
-            </div>
-        </div>
+        <!-- Top Bar + Main Navbar with Centered Logo -->
+<nav class="bg-white shadow-md">
+  <!-- Top Bar -->
+  <div class="bg-[#ffffff] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 relative">
 
+      <!-- Centered Logo -->
+      <div class="absolute left-1/2 transform -translate-x-1/2">
+        <img src="./assets/main.png" alt="School Logo" class="h-10 w-auto">
+      </div>
 
-    </nav>
-    <div class="navbar">
-        <div class="logo">
-            <img src="./assets/main.png" alt="">
-        </div>
-        <div class="navigator">
-            <ul>
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT US</a></li>
-                <li><a href="./admission.html">ADMISSION</a></li>
-                <li><a href="./contact.html">CONTACT US</a></li>
-            </ul>
-        </div>
+      <!-- Desktop Top Bar Links -->
+      <div class="hidden sm:flex space-x-6 items-center">
+        <a href="" class="flex items-center gap-1">
+          <img src="./assets/white phone.svg" alt="" class="h-4 w-4"> +92 3313679089
+        </a>
+        <a href="./helpdesk.html" class="flex items-center gap-1">
+          <img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="h-4 w-4"> ONLINE SERVICE DESK
+        </a>
+      </div>
+
+      <div class="hidden sm:block">
+        <a href="">SCHOOL MANAGEMENT PORTAL</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="sm:hidden flex items-center ml-auto">
+        <button id="hamburger" class="p-2 rounded-md text-blue-600   focus:outline-none">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-white">
+    <!-- Top Bar Links -->
+    <div class="bg-[#003366] px-4 py-2">
+      <a href="" class="block text-white py-1">+92 3313679089</a>
+      <a href="./helpdesk.html" class="block text-white py-1">ONLINE SERVICE DESK</a>
+      <a href="" class="block text-white py-1">SCHOOL MANAGEMENT PORTAL</a>
+    </div>
+    <!-- Main Navbar Links -->
+    <div class="px-4 py-2 space-y-1">
+      <a href="./index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+      <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+      <a href="./admission.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+      <a href="./contact.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+    </div>
+  </div>
+
+  <!-- Desktop Main Navbar -->
+  <div class="hidden sm:block bg-white">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center h-16 space-x-4">
+        <a href="./index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+        <a href="./about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+        <a href="./admission.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+        <a href="./contact.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 </head>
 
 <body>
@@ -862,24 +920,34 @@
                 src="./assets/scroll-up-down-svgrepo-com.svg" alt=""></button>
     </div>
     <!-- hero  -->
-    <div class="text1">
-        
+<div class="relative text1 max-w-4xl mx-auto my-8 px-6">
+  <!-- Left Blue Line -->
+  <span class="absolute left-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
+  <!-- Right Blue Line -->
+  <span class="absolute right-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
 
-        The Academic and Training Department at Star Kids Grammar Secondary School works closely with teachers to
-        achieve one shared goal — enhancing the quality of teaching and ensuring effective learning for every student.
-        Our well-structured and standardized curriculum has consistently produced excellent academic results in board
-        examinations. The department also runs a Professional Development Program focused on continuous teacher
-        training, while providing essential resources such as Curriculum Resource Packs (CRPs), Daily Lesson Plans
-        (DLPs), and Assessment Packs to support classroom teaching.
-    </div>
-    <div class="text2">
-        The DLPs enable teachers to concentrate on lesson delivery by reducing the time spent on daily planning. Each
-        DLP is carefully designed around the CRPs, promoting interactive and engaging learning experiences. The
-        Curriculum Resource Packs include a well-defined scheme of studies aligned with both private and board-approved
-        publications, developed for two academic terms. By integrating CRPs and DLPs, Star Kids ensures that every class
-        maintains a consistent standard of education, fostering both teacher efficiency and student excellence
-        throughout the academic year.
-    </div>
+  The Academic and Training Department at Star Kids Grammar Secondary School works closely with teachers to
+  achieve one shared goal — enhancing the quality of teaching and ensuring effective learning for every student.
+  Our well-structured and standardized curriculum has consistently produced excellent academic results in board
+  examinations. The department also runs a Professional Development Program focused on continuous teacher
+  training, while providing essential resources such as Curriculum Resource Packs (CRPs), Daily Lesson Plans
+  (DLPs), and Assessment Packs to support classroom teaching.
+</div>
+
+<div class="relative text2 max-w-4xl mx-auto my-8 px-6">
+  <!-- Left Blue Line -->
+  <span class="absolute left-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
+  <!-- Right Blue Line -->
+  <span class="absolute right-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
+
+  The DLPs enable teachers to concentrate on lesson delivery by reducing the time spent on daily planning. Each
+  DLP is carefully designed around the CRPs, promoting interactive and engaging learning experiences. The
+  Curriculum Resource Packs include a well-defined scheme of studies aligned with both private and board-approved
+  publications, developed for two academic terms. By integrating CRPs and DLPs, Star Kids ensures that every class
+  maintains a consistent standard of education, fostering both teacher efficiency and student excellence
+  throughout the academic year.
+</div>
+
     <div class="heading1">
         ADMISSION CALENDAR
     </div>

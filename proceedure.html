@@ -571,17 +571,19 @@
 
        /* text2 styling */
 .container {
-  margin-top: 50px;
+  margin: 50px auto;             /* center horizontally and add top margin */
   background-color: #666666;
-  height: auto; /* allow flexible height */
+  height: auto;                  /* allow flexible height */
   min-height: 150px;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 20px;            /* internal padding */
   text-align: center;
+  max-width: 1000px;             /* limit width to avoid touching edges */
+  box-sizing: border-box;        /* include padding in width */
 }
 
 .container ul {
@@ -608,6 +610,7 @@
   .container {
     padding: 20px;
     border-radius: 20px;
+    max-width: 90%;              /* leave space from screen edges */
   }
 
   .container ul li {
@@ -618,12 +621,14 @@
 @media (max-width: 480px) {
   .container {
     padding: 15px;
+    max-width: 95%;              /* more space on very small screens */
   }
 
   .container ul li {
     font-size: 16px;
   }
 }
+
 
 
 
@@ -889,42 +894,92 @@
     width: 24px;
   }
 }
+  /* Remove underline on all links */
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
     </style>
     <title>ADMISSION PROCEEDURE</title>
-    <nav>
-        <div class="top">
-            <div class="topleft">
-                <ul>
-                    <li><a href=""><img src="./assets/white phone.svg" alt="" class="font-bold">+92 3313679089</a>
-                    </li>
-                    <li><a href="./helpdesk.html"><img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="font-bold">ONLINE
-                            SERVICE
-                            DESK </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="topright">
-                <ul>
-                    <li><a href="">SCHOOL MANAGEMENT PORTAL</a></li>
-                </ul>
-            </div>
-        </div>
+        <!-- Top Bar + Main Navbar with Centered Logo -->
+<nav class="bg-white shadow-md">
+  <!-- Top Bar -->
+  <div class="bg-[#ffffff] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 relative">
 
+      <!-- Centered Logo -->
+      <div class="absolute left-1/2 transform -translate-x-1/2">
+        <img src="./assets/main.png" alt="School Logo" class="h-10 w-auto">
+      </div>
 
-    </nav>
-    <div class="navbar">
-        <div class="logo">
-            <img src="./assets/main.png" alt="">
-        </div>
-        <div class="navigator">
-            <ul>
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT US</a></li>
-                <li><a href="./admission.html">ADMISSION</a></li>
-                <li><a href="./contact.html">CONTACT US</a></li>
-            </ul>
-        </div>
+      <!-- Desktop Top Bar Links -->
+      <div class="hidden sm:flex space-x-6 items-center">
+        <a href="" class="flex items-center gap-1">
+          <img src="./assets/white phone.svg" alt="" class="h-4 w-4"> +92 3313679089
+        </a>
+        <a href="./helpdesk.html" class="flex items-center gap-1">
+          <img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="h-4 w-4"> ONLINE SERVICE DESK
+        </a>
+      </div>
+
+      <div class="hidden sm:block">
+        <a href="">SCHOOL MANAGEMENT PORTAL</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="sm:hidden flex items-center ml-auto">
+        <button id="hamburger" class="p-2 rounded-md text-blue-600   focus:outline-none">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-white">
+    <!-- Top Bar Links -->
+    <div class="bg-[#003366] px-4 py-2">
+      <a href="" class="block text-white py-1">+92 3313679089</a>
+      <a href="./helpdesk.html" class="block text-white py-1">ONLINE SERVICE DESK</a>
+      <a href="" class="block text-white py-1">SCHOOL MANAGEMENT PORTAL</a>
+    </div>
+    <!-- Main Navbar Links -->
+    <div class="px-4 py-2 space-y-1">
+      <a href="./index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+      <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+      <a href="./admission.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+      <a href="./contact.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+    </div>
+  </div>
+
+  <!-- Desktop Main Navbar -->
+  <div class="hidden sm:block bg-white">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center h-16 space-x-4">
+        <a href="./index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+        <a href="./about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+        <a href="./admission.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+        <a href="./contact.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 </head>
 
 <body>
@@ -959,15 +1014,32 @@
     <!-- text  -->
     <div class="textcontainer">
         <div class="text">
-            <ul>
-                <li class="font-[Ubuntu] text-[30px] font-medium leading-[33px] text-[#333333]">There is no written test
-                    for
-                    pre-school. The admission test for primary and</li>
-                <li class="font-[Ubuntu] text-[30px] font-medium leading-[33px] text-[#333333] ">secondary school is
-                    based
-                    on the
-                    following subjects and classes</li>
-            </ul>
+<ul class="relative flex flex-col items-center space-y-6 max-w-4xl mx-auto px-4">
+
+  <!-- List Item 1 -->
+  <li class="relative font-[Ubuntu] text-[30px] font-medium leading-[33px] text-[#333333] px-6">
+
+    <!-- Left Blue Line -->
+    <span class="absolute left-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
+    <!-- Right Blue Line -->
+    <span class="absolute right-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
+
+    There is no written test for pre-school. The admission test for primary and
+  </li>
+
+  <!-- List Item 2 -->
+  <li class="relative font-[Ubuntu] text-[30px] font-medium leading-[33px] text-[#333333] px-6">
+
+    <!-- Left Blue Line -->
+    <span class="absolute left-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
+    <!-- Right Blue Line -->
+    <span class="absolute right-0 top-0 h-full w-1 bg-[#0066b3] rounded-sm"></span>
+
+    secondary school is based on the following subjects and classes
+  </li>
+
+</ul>
+
         </div>
     </div>
     <!-- icons  -->

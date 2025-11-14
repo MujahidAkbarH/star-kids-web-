@@ -388,85 +388,95 @@
        
                /* contact  grid styling */
     .news-events {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;      /* allow wrapping */
+  justify-content: center; /* center the cards */
+  gap: 20px;            /* spacing between cards */
+}
 
-      background-color: #ffffff;
-      /* blue background */
-      padding: 40px 0;
-      display: flex;
-    }
+/* Card styling */
+.news-card {
+  flex: 1 1 300px;      /* responsive width, min 300px */
+  max-width: 400px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
 
-    .news-card {
-        width:400px;
-      border: none;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-      margin-bottom: 30px;
-    }
+.news-card:hover {
+  transform: translateY(-5px);
+}
 
-    .news-card:hover {
-      transform: translateY(-5px);
-    }
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 
-    .image-wrapper {
-      position: relative;
-      overflow: hidden;
-    }
+.image-wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
 
-    .image-wrapper img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
+.news-card:hover .image-wrapper img {
+  transform: scale(1.05);
+}
 
-    .news-card:hover .image-wrapper img {
-      transform: scale(1.05);
-    }
+.overlay {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 144, 255, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.4s ease;
+}
 
-    .overlay {
-      position: absolute;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(30, 144, 255, 0.85);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: top 0.4s ease;
-    }
+.news-card:hover .overlay {
+  top: 0;
+}
 
-    .news-card:hover .overlay {
-      top: 0;
-    }
+.overlay a {
+  background: white;
+  color: #1e90ff;
+  font-weight: 600;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
 
-    .overlay a {
-      background: white;
-      color: #1e90ff;
-      font-weight: 600;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      text-decoration: none;
-    }
+.news-card .card-body {
+  background: white;
+  text-align: left;
+  padding: 15px;
+}
 
-    .news-card .card-body {
-      background: white;
-      text-align: left;
-      padding: 15px;
-    }
+.news-card .card-title {
+  font-weight: 700;
+  color: #222;
+}
 
-    .news-card .card-title {
-      font-weight: 700;
-      color: #222;
-    }
+.news-card .card-text {
+  color: #444;
+  font-size: 0.9rem;
+}
 
-    .news-card .card-text {
-      color: #444;
-      font-size: 0.9rem;
-    }
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .news-card {
+    flex: 1 1 100%;   /* full width on mobile */
+    max-width: 100%;
+  }
+}
     /* contact   grid STYKING  end  */
   /* footer */
        .end {
@@ -730,42 +740,92 @@
     width: 24px;
   }
 }
+  /* Remove underline on all links */
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
     </style>
     <title>CONTACT US </title>
-    <nav>
-        <div class="top">
-            <div class="topleft">
-                <ul>
-                    <li><a href=""><img src="./assets/white phone.svg" alt="" class="font-bold">+92 3313679089</a>
-                    </li>
-                    <li><a href="./helpdesk.html"><img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="font-bold">ONLINE
-                            SERVICE
-                            DESK </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="topright">
-                <ul>
-                    <li><a href="">SCHOOL MANAGEMENT PORTAL</a></li>
-                </ul>
-            </div>
-        </div>
+        <!-- Top Bar + Main Navbar with Centered Logo -->
+<nav class="bg-white shadow-md">
+  <!-- Top Bar -->
+  <div class="bg-[#ffffff] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 relative">
 
+      <!-- Centered Logo -->
+      <div class="absolute left-1/2 transform -translate-x-1/2">
+        <img src="./assets/main.png" alt="School Logo" class="h-10 w-auto">
+      </div>
 
-    </nav>
-    <div class="navbar">
-        <div class="logo">
-            <img src="./assets/main.png" alt="">
-        </div>
-        <div class="navigator">
-            <ul>
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT US</a></li>
-                <li><a href="./admission.html">ADMISSION</a></li>
-                <li><a href="./contact.html">CONTACT US</a></li>
-            </ul>
-        </div>
+      <!-- Desktop Top Bar Links -->
+      <div class="hidden sm:flex space-x-6 items-center">
+        <a href="" class="flex items-center gap-1">
+          <img src="./assets/white phone.svg" alt="" class="h-4 w-4"> +92 3313679089
+        </a>
+        <a href="./helpdesk.html" class="flex items-center gap-1">
+          <img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="h-4 w-4"> ONLINE SERVICE DESK
+        </a>
+      </div>
+
+      <div class="hidden sm:block">
+        <a href="">SCHOOL MANAGEMENT PORTAL</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="sm:hidden flex items-center ml-auto">
+        <button id="hamburger" class="p-2 rounded-md text-blue-600   focus:outline-none">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-white">
+    <!-- Top Bar Links -->
+    <div class="bg-[#003366] px-4 py-2">
+      <a href="" class="block text-white py-1">+92 3313679089</a>
+      <a href="./helpdesk.html" class="block text-white py-1">ONLINE SERVICE DESK</a>
+      <a href="" class="block text-white py-1">SCHOOL MANAGEMENT PORTAL</a>
+    </div>
+    <!-- Main Navbar Links -->
+    <div class="px-4 py-2 space-y-1">
+      <a href="./index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+      <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+      <a href="./admission.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+      <a href="./contact.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+    </div>
+  </div>
+
+  <!-- Desktop Main Navbar -->
+  <div class="hidden sm:block bg-white">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center h-16 space-x-4">
+        <a href="./index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
+        <a href="./about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
+        <a href="./admission.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
+        <a href="./contact.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 </head>
 
 <body>
