@@ -1,6 +1,13 @@
+  // pop up script
+
   //for scroll button
   document.querySelector('.upscroll button').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+    window.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("auto-modal");
+    modal.showModal();
+    modal.addEventListener("cancel", e => e.preventDefault());
   });
   //for admisison form alert
           const dobInput = document.getElementById('dob');

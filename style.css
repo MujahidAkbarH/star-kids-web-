@@ -1,3 +1,30 @@
+/* <!-- pop up styling --> */
+  dialog[open] el-dialog-panel {
+    animation: popup-show .35s ease-out forwards;
+  }
+  dialog[data-closing] el-dialog-panel {
+    animation: popup-hide .25s ease-in forwards;
+  }
+
+  @keyframes popup-show {
+    0% { opacity: 0; transform: translateY(30px) scale(.96); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes popup-hide {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(20px) scale(.95); }
+  }
+    #auto-modal button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  /* /* [pop up close button] *styling */
+    #auto-modal button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+
 /* ===== RESET ===== */
 * {
   margin: 0;
@@ -85,6 +112,11 @@
   color: #403639;
   text-decoration: none;
 }
+#aboutToggle:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 
 
 /* ===== RESPONSIVE DESIGN ===== */

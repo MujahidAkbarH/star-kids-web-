@@ -657,72 +657,51 @@
   }
     </style>
     <title>FAQ'S</title>
-       <!-- Top Bar + Main Navbar with Centered Logo -->
-<nav class="bg-white shadow-md">
-  <!-- Top Bar -->
-  <div class="bg-[#ffffff] text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 relative">
+     <!-- Blue Top Info Bar -->
+<div class="bg-[#0066b3] text-white px-4 py-2">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center text-sm sm:text-base space-y-2 sm:space-y-0">
+    <a href="" class="no-underline-link text-center sm:text-left">+92 3313679089</a>
+    <a href="./helpdesk.html" class="no-underline-link text-center sm:text-left">ONLINE SERVICE DESK</a>
+    <a href="" class="no-underline-link text-center sm:text-left">SCHOOL MANAGEMENT PORTAL</a>
+  </div>
+</div>
 
-      <!-- Centered Logo -->
-      <div class="absolute left-1/2 transform -translate-x-1/2">
-        <img src="./assets/main.png" alt="School Logo" class="h-10 w-auto">
-      </div>
-
-      <!-- Desktop Top Bar Links -->
-      <div class="hidden sm:flex space-x-6 items-center">
-        <a href="" class="flex items-center gap-1">
-          <img src="./assets/white phone.svg" alt="" class="h-4 w-4"> +92 3313679089
-        </a>
-        <a href="./helpdesk.html" class="flex items-center gap-1">
-          <img src="./assets/open-envelop-svgrepo-com.svg" alt="" class="h-4 w-4"> ONLINE SERVICE DESK
-        </a>
-      </div>
-
-      <div class="hidden sm:block">
-        <a href="">SCHOOL MANAGEMENT PORTAL</a>
-      </div>
-
-      <!-- Mobile Hamburger -->
-      <div class="sm:hidden flex items-center ml-auto">
-        <button id="hamburger" class="p-2 rounded-md text-blue-600   focus:outline-none">
-          <span class="sr-only">Open menu</span>
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
+<!-- White Main Navbar (Sticky) -->
+<div class="sticky top-0 z-50 bg-white shadow-md px-4 sm:px-6 lg:px-8">
+  <!-- Desktop -->
+  <div class="hidden sm:flex justify-between items-center h-16 max-w-7xl mx-auto">
+    <img src="./assets/main.png" class="h-16 w-auto">
+    <div class="flex space-x-4">
+      <a href="./index.html" class="px-3 py-2 hover:bg-gray-100 rounded-md">HOME</a>
+      <a href="./about.html" class="px-3 py-2 hover:bg-gray-100 rounded-md">ABOUT US</a>
+      <a href="./admission.html" class="px-3 py-2 hover:bg-gray-100 rounded-md">ADMISSION</a>
+      <a href="./contact.html" class="px-3 py-2 hover:bg-gray-100 rounded-md">CONTACT US</a>
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden sm:hidden bg-white">
-    <!-- Top Bar Links -->
-    <div class="bg-[#003366] px-4 py-2">
-      <a href="" class="block text-white py-1">+92 3313679089</a>
-      <a href="./helpdesk.html" class="block text-white py-1">ONLINE SERVICE DESK</a>
-      <a href="" class="block text-white py-1">SCHOOL MANAGEMENT PORTAL</a>
-    </div>
-    <!-- Main Navbar Links -->
-    <div class="px-4 py-2 space-y-1">
-      <a href="./index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
-      <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
-      <a href="./admission.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
-      <a href="./contact.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
-    </div>
-  </div>
+  <!-- Mobile -->
+<!-- Mobile -->
+<div class="sm:hidden flex justify-between items-center h-16 relative">
+  <img src="./assets/main.png" class="h-10 w-auto">
+  <button id="hamburger" class="p-2 rounded-md text-blue-600 z-50">
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
 
-  <!-- Desktop Main Navbar -->
-  <div class="hidden sm:block bg-white">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-center h-16 space-x-4">
-        <a href="./index.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">HOME</a>
-        <a href="./about.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ABOUT US</a>
-        <a href="./admission.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ADMISSION</a>
-        <a href="./contact.html" class="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">CONTACT US</a>
-      </div>
-    </div>
+  <!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-lg z-40">
+
+    <a href="./index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-none rounded-b-md">HOME</a>
+    <a href="./about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-md">ABOUT US</a>
+    <a href="./admission.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-md">ADMISSION</a>
+    <a href="./contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-md">CONTACT US</a>
   </div>
-</nav>
+</div>
+
+  </div>
+</div>
 
 <script>
   const hamburger = document.getElementById('hamburger');
