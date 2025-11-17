@@ -762,59 +762,247 @@
     </style>
     <title>SKGSS at a glance</title>
      <!-- Blue Top Info Bar -->
-<div class="bg-[#0066b3] text-white px-4 py-2">
-  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center text-sm sm:text-base space-y-2 sm:space-y-0">
-    <a href="" class="no-underline-link text-center sm:text-left">+92 3313679089</a>
-    <a href="./helpdesk.html" class="no-underline-link text-center sm:text-left">ONLINE SERVICE DESK</a>
-    <a href="" class="no-underline-link text-center sm:text-left">SCHOOL MANAGEMENT PORTAL</a>
-  </div>
-</div>
-
-<!-- White Main Navbar (Sticky) -->
-<div class="sticky top-0 z-50 bg-white shadow-md px-4 sm:px-6 lg:px-8">
-  <!-- Desktop -->
-  <div class="hidden sm:flex justify-between items-center h-16 max-w-7xl mx-auto">
-    <img src="./assets/main.png" class="h-16 w-auto">
-    <div class="flex space-x-4">
-      <a href="./index.html" class="px-3 py-2 hover:bg-gray-100 rounded-md">HOME</a>
-      <a href="./about.html" class="px-3 py-2 hover:bg-gray-100 rounded-md">ABOUT US</a>
-      <a href="./admission.html" class="px-3 py-2 hover:bg-gray-100 rounded-md">ADMISSION</a>
-      <a href="./contact.html" class="px-3 py-2 hover:bg-gray-100 rounded-md">CONTACT US</a>
+    <div class="bg-[#0066b3] text-white px-4 py-2">
+        <div
+            class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center text-sm sm:text-base space-y-2 sm:space-y-0">
+            <a href="" class="no-underline-link text-center sm:text-left">+92 3313679089</a>
+            <a href="./helpdesk.html" class="no-underline-link text-center sm:text-left">ONLINE SERVICE DESK</a>
+            <a href="" class="no-underline-link text-center sm:text-left">SCHOOL MANAGEMENT PORTAL</a>
+        </div>
     </div>
-  </div>
 
-  <!-- Mobile -->
-<!-- Mobile -->
-<div class="sm:hidden flex justify-between items-center h-16 relative">
-  <img src="./assets/main.png" class="h-10 w-auto">
-  <button id="hamburger" class="p-2 rounded-md text-blue-600 z-50">
-    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-  </button>
+    <!-- Navbar -->
+    <div class="sticky top-0 z-50 bg-white shadow-md px-4 sm:px-6 lg:px-8">
 
-  <!-- Mobile Dropdown Menu -->
-<div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-lg z-40">
+        <!-- Desktop Navbar -->
+        <div class="hidden sm:flex justify-between items-center h-16 max-w-7xl mx-auto">
+            <img src="./assets/main.png" class="h-16 w-auto">
 
-    <a href="./index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-none rounded-b-md">HOME</a>
-    <a href="./about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-md">ABOUT US</a>
-    <a href="./admission.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-md">ADMISSION</a>
-    <a href="./contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-md">CONTACT US</a>
+            <div class="flex space-x-6 items-center">
+
+                <!-- HOME Dropdown -->
+                <div class="relative group">
+                       <a href="./index.html" class="px-3 py-2 hover:bg-gray-100 rounded-md inline-block focus:outline-none">
+        HOME
+    </a>
+
+                    <!-- <div class="absolute left-0 mt-1 opacity-0 pointer-events-none 
+                    group-hover:opacity-100 group-hover:pointer-events-auto 
+                    transition-opacity duration-200 bg-white shadow-lg rounded-md w-40 py-2 z-50">
+
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Announcements</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">News</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Events</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Gallery</a>
+                    </div> -->
+                </div>
+
+                <!-- ABOUT US Dropdown -->
+<div class="relative group">
+    <!-- Parent link styled as button -->
+    <a href="./about.html" class="px-3 py-2 hover:bg-gray-100 rounded-md inline-block focus:outline-none">
+        ABOUT US
+    </a>
+
+    <!-- Dropdown -->
+    <div class="absolute left-0 mt-0 opacity-0 pointer-events-none 
+                group-hover:opacity-100 group-hover:pointer-events-auto 
+                transition-all duration-200 bg-white shadow-lg rounded-md w-48 py-2 z-50">
+        <a href="./mission.html" class="block px-4 py-2 hover:bg-gray-100">Vision & Mission</a>
+        <a href="./message.html" class="block px-4 py-2 hover:bg-gray-100">Chairperson's Message</a>
+        <a href="./training.html" class="block px-4 py-2 hover:bg-gray-100">Teacher's Training</a>
+        <a href="./glance.html" class="block px-4 py-2 hover:bg-gray-100">Star Kids At Glance</a>
+    </div>
+</div>
+
+
+
+                <!-- ADMISSION Dropdown -->
+<div class="relative group">
+  <!-- Button -->
+    <a href="./admission.html" class="px-3 py-2 hover:bg-gray-100 rounded-md inline-block focus:outline-none">
+        ADMISSION
+    </a>
+
+  <!-- Dropdown -->
+  <div class="absolute left-0 top-full mt-0 opacity-0 pointer-events-none 
+              group-hover:opacity-100 group-hover:pointer-events-auto 
+              transition-all duration-200 bg-white shadow-lg rounded-md w-48 py-2 z-50">
+    <a href="./proceedure.html" class="block px-4 py-2 hover:bg-gray-100">Admission Proceedure</a>
+    <a href="./academics.html" class="block px-4 py-2 hover:bg-gray-100">Academics</a>
+    <a href="./online.html" class="block px-4 py-2 hover:bg-gray-100">Online Admission</a>
+    <a href="./examination.html" class="block px-4 py-2 hover:bg-gray-100">Examinations</a>
   </div>
 </div>
 
-  </div>
+
+                <!-- CONTACT US Dropdown -->
+<div class="relative group">
+    <!-- Parent link styled as button -->
+    <a href="./contact.html" class="px-3 py-2 hover:bg-gray-100 rounded-md inline-block focus:outline-none focus:ring-0">
+        CONTACT
+    </a>
+
+    <!-- Dropdown -->
+    <div class="absolute left-0 mt-0 opacity-0 pointer-events-none 
+                group-hover:opacity-100 group-hover:pointer-events-auto 
+                transition-all duration-200 bg-white shadow-lg rounded-md w-48 py-2 z-50">
+        <a href="./helpdesk.html" class="block px-4 py-2 hover:bg-gray-100">Service Desk</a>
+        <a href="./faq.html" class="block px-4 py-2 hover:bg-gray-100">FAQ's</a>
+        <a href="./location.html" class="block px-4 py-2 hover:bg-gray-100">Locate Us</a>
+        <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQs</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sitemap</a> -->
+    </div>
 </div>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
 
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar (No Dropdowns) -->
+        <div class="sm:hidden flex justify-between items-center h-16 relative">
+            <img src="./assets/main.png" class="h-10 w-auto">
+
+            <button id="hamburger"
+                class="p-2 rounded-md text-blue-600 z-50 focus:outline-none focus:ring-0 active:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-lg z-40">
+
+    <a href="./index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">HOME</a>
+
+    <!-- ABOUT US -->
+    <div class="menu-item border-t">
+        <div class="menu-header flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+            <a href="./about.html" class="flex-1">ABOUT US</a>
+            <button class="toggle-btn ml-4 px-2 py-1 text-xl 
+    focus:outline-none focus:ring-0 active:outline-none 
+    border-0 outline-none">
+    <span class="icon">+</span>
+</button>
+
+        </div>
+
+        <div class="submenu hidden pl-6 bg-gray-50">
+        <a href="./mission.html" class="block px-4 py-2 hover:bg-gray-100">Vision & Mission</a>
+        <a href="./message.html" class="block px-4 py-2 hover:bg-gray-100">Chairperson's Message</a>
+        <a href="./training.html" class="block px-4 py-2 hover:bg-gray-100">Teacher's Training</a>
+        <a href="./glance.html" class="block px-4 py-2 hover:bg-gray-100">Star Kids At Glance</a>
+        </div>
+    </div>
+
+    <!-- ADMISSION -->
+    <div class="menu-item border-t">
+        <div class="menu-header flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+            <a href="./admission.html" class="flex-1">ADMISSION</a>
+           <button class="toggle-btn ml-4 px-2 py-1 text-xl 
+    focus:outline-none focus:ring-0 active:outline-none 
+    border-0 outline-none">
+    <span class="icon">+</span>
+</button>
+
+        </div>
+
+        <div class="submenu hidden pl-6 bg-gray-50">
+    <a href="./proceedure.html" class="block px-4 py-2 hover:bg-gray-100">Admission Proceedure</a>
+    <a href="./academics.html" class="block px-4 py-2 hover:bg-gray-100">Academics</a>
+    <a href="./online.html" class="block px-4 py-2 hover:bg-gray-100">Online Admission</a>
+    <a href="./examination.html" class="block px-4 py-2 hover:bg-gray-100">Examinations</a>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="menu-item border-t">
+        <div class="menu-header flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+            <a href="./contact.html" class="flex-1">CONTACT US</a>
+            <button class="toggle-btn ml-4 px-2 py-1 text-xl 
+    focus:outline-none focus:ring-0 active:outline-none 
+    border-0 outline-none">
+    <span class="icon">+</span>
+</button>
+
+        </div>
+
+        <div class="submenu hidden pl-6 bg-gray-50">
+        <a href="./helpdesk.html" class="block px-4 py-2 hover:bg-gray-100">Service Desk</a>
+        <a href="./faq.html" class="block px-4 py-2 hover:bg-gray-100">FAQ's</a>
+        <a href="./location.html" class="block px-4 py-2 hover:bg-gray-100">Locate Us</a>
+        </div>
+    </div>
+
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // const hamburger = document.getElementById('hamburger');
+        // const mobileMenu = document.getElementById('mobile-menu');
+
+        // hamburger.addEventListener('click', () => {
+        //     mobileMenu.classList.toggle('hidden');
+        // });
+
+        // document.addEventListener("DOMContentLoaded", function () {
+
+        //     // MOBILE MENU OPEN/CLOSE
+        //     const hamburger = document.getElementById("hamburger");
+        //     const mobileMenu = document.getElementById("mobile-menu");
+
+        //     if (hamburger && mobileMenu) {
+        //         hamburger.addEventListener("click", () => {
+        //             mobileMenu.classList.toggle("hidden");
+        //         });
+        //     }
+
+        //     // ABOUT US SUBMENU OPEN/CLOSE
+        //     const aboutToggle = document.getElementById("aboutToggle");
+        //     const aboutSubmenu = document.getElementById("aboutSubmenu");
+        //     const aboutIcon = document.getElementById("aboutIcon");
+
+        //     if (aboutToggle && aboutSubmenu && aboutIcon) {
+        //         aboutToggle.addEventListener("click", () => {
+
+        //             aboutSubmenu.classList.toggle("hidden");
+
+        //             // Change + to -
+        //             aboutIcon.textContent =
+        //                 aboutSubmenu.classList.contains("hidden") ? "+" : "-";
+        //         });
+        //     }
+
+        // });
+        // MOBILE MENU
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
+
+hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
+
+// MULTI DROPDOWN CONTROLLER (NO IDS REQUIRED)
+document.querySelectorAll(".menu-item").forEach(item => {
+    const toggleBtn = item.querySelector(".toggle-btn");
+    const submenu = item.querySelector(".submenu");
+    const icon = item.querySelector(".icon");
+
+    toggleBtn.addEventListener("click", (e) => {
+        e.preventDefault(); 
+        e.stopPropagation();
+
+        submenu.classList.toggle("hidden");
+        icon.textContent = submenu.classList.contains("hidden") ? "+" : "-";
+    });
+});
+
+
+
+    </script>
 
 </head>
 
@@ -915,7 +1103,7 @@
         </div>
         <div class="extremeendright">
             <ul>
-                <a href=" https://www.instagram.com/starkidsgss_official/ " class="text-decoration-none">
+                <a href="https://www.instagram.com/starkidsgss_official/" class="text-decoration-none">
                     <li><button class="outline-none focus:outline-none active:outline-none"><img
                                 src="./assets/instagram-svgrepo-com.svg" alt=""></button></li>
                 </a>
